@@ -15,5 +15,10 @@ a = np.size(a)
 print(a)
 
 #2.是否全班同學最高分都是國文?
-b = np.all(np.greater(chinese_score,math_score,english_score))
+b = np.greater(chinese_score,math_score)
 print(b)
+c = np.greater(chinese_score,english_score)
+print(c)
+
+print(np.logical_and(b,c))
+print(np.logical_and(b,c).all())
