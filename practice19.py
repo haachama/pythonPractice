@@ -45,7 +45,7 @@ plt.bar(X, -Y2, facecolor='#FF88C2', edgecolor='white')
 for x,y in zip(X,Y1):
     plt.text(x+0.4, y+0.05, '%.2f' % y, ha='center', va= 'bottom')
 for x,y in zip(X,-Y2):
-    plt.text(x+0.4, y-0.05, '%.2f' % y, ha='center', va= 'bottom')
+    plt.text(x+0.4, y-0.05, '%.2f' % y, ha='center', va= 'top')
  #設定Y軸區間
 plt.ylim(-1.25,+1.25)
 plt.show()
