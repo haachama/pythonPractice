@@ -38,18 +38,6 @@ survived_counts = pd.crosstab([df.pclass, df.sex],df.survived)
 print(survived_counts) 
 survived_counts.plot(kind='bar', stacked=True)
 
-
-
-#鬼之繪圖
-n = sns.FacetGrid(data = df, col="survived", hue="survived")
-n.map(sns.histplot, "sex","class",data=df,legend=True,stat="count",cbar=True)
-plt.show()
-
-p = sns.FacetGrid(data = df, col="survived", hue="survived")
-p.map(sns.histplot, "sex","class",data=df,legend=True,stat="probability",cbar=True)
-plt.show()
-
-
 # 繪製小提琴圖
 # 直接使用PANDAS dataframe, 當作參數
 #條形圖()顯示分類變數和連續變數之間的關係。數據以矩形條表示,其中條的長度表示該類別中數據的比例。
